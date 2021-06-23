@@ -110,6 +110,19 @@ li {
 .loading-box .text {
   bottom: -14%;
 }
+[o-animation="shrink"] {
+  -webkit-animation: shrink 1s linear alternate infinite;
+  animation: shrink 1s linear alternate infinite;
+}
+@-webkit-keyframes shrink{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes shrink{
+  0%{transform:scale(0.9);}
+  100%{transform:scale(1);}
+}
+
 .page-1 .so {
   position: absolute;
 }
@@ -153,6 +166,105 @@ li {
 .page-1 .so-6 {
   left: 0px;
   top: 0px;
+  z-index: 0;
+}
+.page2 .so-0 {
+  left: 92px;
+  top: 204px;
+  z-index: 4;
+}
+
+.page2 .so-1 {
+  left: 81px;
+  top: 247px;
+  z-index: 3;
+}
+
+.page2 .so-2 {
+  left: 81px;
+  top: 399px;
+  z-index: 2;
+}
+
+.page2 .so-3 {
+  left: 259px;
+  top: 1221px;
+  z-index: 1;
+}
+
+.page2 .so-4 {
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+.page3 .so-0 {
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+
+.page3 .so-1 {
+  left: 57px;
+  top: 296px;
+  z-index: 4;
+}
+
+.page3 .so-2 {
+  left: 274px;
+  top: 722px;
+  z-index: 3;
+}
+
+.page3 .so-3 {
+  left: 57px;
+  top: 809px;
+  z-index: 2;
+}
+
+.page3 .so-4 {
+  left: 297px;
+  top: 1163px;
+  z-index: 1;
+}
+
+.page3 .so-5 {
+  left: 189px;
+  top: 1220px;
+  z-index: 0;
+}
+.page4 .so-0 {
+  left: 535px;
+  top: 1013px;
+  z-index: 5;
+}
+
+.page4 .so-1 {
+  left: 42px;
+  top: 1051px;
+  z-index: 4;
+}
+
+.page4 .so-2 {
+  left: 44px;
+  top: 1223px;
+  z-index: 3;
+}
+
+.page4 .so-3 {
+  left: 414px;
+  top: 1224px;
+  z-index: 2;
+}
+
+.page4 .so-4 {
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.page4 .so-5 {
+  left: 41px;
+  top: 36px;
   z-index: 0;
 }
 

@@ -1,4 +1,4 @@
-// Wed Jun 23 2021 23:40:11 GMT+0800 (中国标准时间)
+// Thu Jun 24 2021 00:28:12 GMT+0800 (中国标准时间)
 var owo = {tool: {},state: {},event: {}};
 /* 方法合集 */
 var _owo = {
@@ -498,6 +498,15 @@ owo.go = function (aniStr) {
   }
 }
 
+
+// 待修复 跳转返回没有了
+var toList = document.querySelectorAll('[go]')
+for (var index = 0; index < toList.length; index++) {
+  var element = toList[index]
+  element.onclick = function () {
+    owo.go(this.attributes['go'].value)
+  }
+}
 
 // 沙盒运行
 function shaheRun (code) {
