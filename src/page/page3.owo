@@ -1,7 +1,7 @@
 <template lang="pug">
 .page3
   img.so.so-0(src="@|1262.jpg|")
-  img.so.so-1(src="@|1380.png|")
+  video.so.so-1(src="https://cunchu.site/show/mp4/dandelion.mp4" controls="controls")
   img.so.so-2(src="@|1332.png|")
   img.so.so-3(src="@|1331.png|")
   img.so.so-4(src="@|1336.png|")
@@ -21,6 +21,8 @@ module.exports = {
   left: 57px;
   top: 296px;
   z-index: 4;
+  width: 636px;
+  height: 358px;
 }
 .so-2 {
   left: 274px;
