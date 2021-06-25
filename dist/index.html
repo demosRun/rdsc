@@ -250,15 +250,19 @@
 
           setTimeout(function() {
             _this2.query('video').play();
-          }, 2000);
+          }, 1000);
         },
         "replay": function replay() {
           var video = this.query('video');
           video.currentTime = 0;
           video.play();
         },
+        "show": function show() {
+          owo.script.music.pause();
+        },
         "leave": function leave() {
           this.query('video').pause();
+          owo.script.music.play();
         }
       },
       "page4": {

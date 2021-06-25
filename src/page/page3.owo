@@ -10,17 +10,22 @@
 <script>
 module.exports = {
   created: function () {
+    
     setTimeout(() => {
       this.query('video').play()
-    }, 2000);
+    }, 1000);
   },
   replay: function () {
     const video = this.query('video')
     video.currentTime = 0
     video.play()
   },
+  show: function () {
+    owo.script.music.pause()
+  },
   leave: function () {
     this.query('video').pause()
+    owo.script.music.play()
   }
 }
 </script>
