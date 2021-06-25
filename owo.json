@@ -85,6 +85,16 @@
 			"name": "main",
 			"src": "./src/main.js",
 			"resource": true
+		},
+		{
+			"name": "typing",
+			"afterbody": true,
+			"src": "./owo_modules/typing.js"
+		},
+		{
+			"name": "toast",
+			"afterbody": true,
+			"src": "./owo_modules/toast.js"
 		}
 	],
 	"styleList": [
@@ -95,11 +105,6 @@
 		}
 	],
 	"pageList": [
-		{
-			"name": "loading",
-			"src": "https://template.owo.ink/896590e716ebcc0d.owo",
-			"type": "page"
-		},
 		{
 			"name": "page1",
 			"src": "./src/page/page1.owo",
@@ -119,6 +124,11 @@
 			"name": "page4",
 			"src": "/src/page/page4.owo",
 			"type": "page"
+		},
+		{
+			"name": "music",
+			"src": "https://template.owo.ink/bc59e31ef893b3fd.owo",
+			"type": "block"
 		}
 	],
 	"mode": {

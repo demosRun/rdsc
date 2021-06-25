@@ -1,108 +1,311 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <!-- 页面的元信息 -->
-    <title>{TAG_14226_TAG}</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    
-      <!-- 页面主样式文件 -->
-      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.core.css">
-      
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-      
-  </head>
-  <body>
-    <div class="scale-box">
-    <!-- 页面[loading]-->
-    <div class="loading-box page" template="loading" style="display: none;"><img class="loading" src="https://cunchu.site/ozzx/resource/loadingLogo.png"><div class="loading-bar"><div class="num-bar"></div></div><span class="text">Loading</span><div class="num">0%</div></div>
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
     <!-- 页面[page1]-->
-    <div class="page-1 page" template="page1" style="display: none;"><img class="so so-0" src="./static/resource/1272.png"><img class="so so-1" src="./static/resource/1294.png"><img class="so so-2" src="./static/resource/639.png" o-animation="shrink" go="page2"><img class="so so-3" src="./static/resource/1329.png"><img class="so so-4" src="./static/resource/1266.png"><img class="so so-5" src="./static/resource/1248.png"><img class="so so-6" src="./static/resource/76.jpg"></div>
+    <div class="page-1 page" template="page1" style="display: none;">
+      <img class="so so-0" src="./static/resource/1272.png">
+      <img class="so so-1" src="./static/resource/1294.png">
+      <img class="so so-2" src="./static/resource/639.png" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true">
+      <img class="so so-3" src="./static/resource/1329.png">
+      <img class="so so-4" src="./static/resource/1266.png">
+      <img class="so so-5" src="./static/resource/1248.png">
+      <img class="so so-6" src="./static/resource/76.jpg">
+    </div>
     <!-- 页面[page2]-->
-    <div class="page2 page" template="page2" style="display: none;"><img class="so so-0" src="./static/resource/136.png"><ul class="so so-2 clear"><li o-tap="select('北京')">北京</li><li o-tap="select('天津')">天津</li><li o-tap="select('上海')">上海</li><li o-tap="select('重庆')">重庆</li><li o-tap="select('河北')">河北</li><li o-tap="select('山西')">山西</li><li o-tap="select('辽宁')">辽宁</li><li o-tap="select('吉林')">吉林</li><li o-tap="select('黑龙江')">黑龙江</li><li o-tap="select('江苏')">江苏</li><li o-tap="select('浙江')">浙江</li><li o-tap="select('安徽')">安徽</li><li o-tap="select('福建')">福建</li><li o-tap="select('江西')">江西</li><li o-tap="select('山东')">山东</li><li o-tap="select('河南')">河南</li><li o-tap="select('湖北')">湖北</li><li o-tap="select('湖南')">湖南</li><li o-tap="select('广东')">广东</li><li o-tap="select('海南')">海南</li><li o-tap="select('四川')">四川</li><li o-tap="select('贵州')">贵州</li><li o-tap="select('云南')">云南</li><li o-tap="select('陕西')">陕西</li><li o-tap="select('甘肃')">甘肃</li><li o-tap="select('青海')">青海</li><li o-tap="select('内蒙古')">内蒙古</li><li o-tap="select('广西')">广西</li><li o-tap="select('西藏')">西藏</li><li o-tap="select('宁夏')">宁夏</li><li o-tap="select('新疆')">新疆</li><li o-tap="select('香港')">香港</li><li o-tap="select('澳门')">澳门</li><li o-tap="select('台湾')">台湾</li><li o-tap="select('海外')">海外</li></ul><select class="so so-1" type="month" id="start"><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option></select><img class="so so-3" src="./static/resource/184.png" o-animation="shrink" go="page3"><img class="so so-4" src="./static/resource/1304.jpg"></div>
+    <div class="page2 page" template="page2" style="display: none;">
+      <img class="so so-0" src="./static/resource/136.png">
+      <ul class="so so-2 clear">
+        <li o-tap="select('beijing')">北京</li>
+        <li o-tap="select('tianjin')">天津</li>
+        <li o-tap="select('shanghai')">上海</li>
+        <li o-tap="select('chongqing')">重庆</li>
+        <li o-tap="select('hebei')">河北</li>
+        <li o-tap="select('shanxi')">山西</li>
+        <li o-tap="select('liaoning')">辽宁</li>
+        <li o-tap="select('jilin')">吉林</li>
+        <li o-tap="select('heilongjiang')">黑龙江</li>
+        <li o-tap="select('jiangsu')">江苏</li>
+        <li o-tap="select('zhejiang')">浙江</li>
+        <li o-tap="select('anhui')">安徽</li>
+        <li o-tap="select('fujian')">福建</li>
+        <li o-tap="select('jiangxi')">江西</li>
+        <li o-tap="select('shandong')">山东</li>
+        <li o-tap="select('henan')">河南</li>
+        <li o-tap="select('hubei')">湖北</li>
+        <li o-tap="select('hunan')">湖南</li>
+        <li o-tap="select('guangdong')">广东</li>
+        <li o-tap="select('hainan')">海南</li>
+        <li o-tap="select('sichuan')">四川</li>
+        <li o-tap="select('guizhou')">贵州</li>
+        <li o-tap="select('yunnan')">云南</li>
+        <li o-tap="select('shanxi')">陕西</li>
+        <li o-tap="select('gansu')">甘肃</li>
+        <li o-tap="select('qinghai')">青海</li>
+        <li o-tap="select('neimenggu')">内蒙古</li>
+        <li o-tap="select('guangxi')">广西</li>
+        <li o-tap="select('xizang')">西藏</li>
+        <li o-tap="select('ningxia')">宁夏</li>
+        <li o-tap="select('xinjiang')">新疆</li>
+        <li o-tap="select('xianggang')">香港</li>
+        <li o-tap="select('aomen')">澳门</li>
+        <li o-tap="select('taiwan')">台湾</li>
+        <li o-tap="select('haiwai')">海外</li>
+      </ul>
+      <select class="so so-1" type="month" id="start">
+        <option value="2021">2021</option>
+        <option value="2020">2020</option>
+        <option value="2019">2019</option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+        <option value="2011">2011</option>
+        <option value="2010">2010</option>
+        <option value="2009">2009</option>
+        <option value="2008">2008</option>
+        <option value="2007">2007</option>
+        <option value="2006">2006</option>
+        <option value="2005">2005</option>
+        <option value="2004">2004</option>
+        <option value="2003">2003</option>
+        <option value="2002">2002</option>
+        <option value="2001">2001</option>
+        <option value="2000">2000</option>
+        <option value="1999">1999</option>
+        <option value="1998">1998</option>
+        <option value="1997">1997</option>
+        <option value="1996">1996</option>
+        <option value="1995">1995</option>
+        <option value="1994">1994</option>
+        <option value="1993">1993</option>
+        <option value="1992">1992</option>
+        <option value="1991">1991</option>
+        <option value="1990">1990</option>
+        <option value="1989">1989</option>
+        <option value="1988">1988</option>
+        <option value="1987">1987</option>
+        <option value="1986">1986</option>
+        <option value="1985">1985</option>
+        <option value="1984">1984</option>
+        <option value="1983">1983</option>
+        <option value="1982">1982</option>
+        <option value="1981">1981</option>
+        <option value="1980">1980</option>
+        <option value="1979">1979</option>
+        <option value="1978">1978</option>
+        <option value="1977">1977</option>
+        <option value="1976">1976</option>
+        <option value="1975">1975</option>
+        <option value="1974">1974</option>
+        <option value="1973">1973</option>
+        <option value="1972">1972</option>
+        <option value="1971">1971</option>
+        <option value="1970">1970</option>
+        <option value="1969">1969</option>
+        <option value="1968">1968</option>
+        <option value="1967">1967</option>
+        <option value="1966">1966</option>
+        <option value="1965">1965</option>
+        <option value="1964">1964</option>
+        <option value="1963">1963</option>
+        <option value="1962">1962</option>
+        <option value="1961">1961</option>
+        <option value="1960">1960</option>
+        <option value="1959">1959</option>
+        <option value="1958">1958</option>
+        <option value="1957">1957</option>
+        <option value="1956">1956</option>
+        <option value="1955">1955</option>
+        <option value="1954">1954</option>
+        <option value="1953">1953</option>
+        <option value="1952">1952</option>
+        <option value="1951">1951</option>
+        <option value="1950">1950</option>
+        <option value="1949">1949</option>
+        <option value="1948">1948</option>
+        <option value="1947">1947</option>
+        <option value="1946">1946</option>
+        <option value="1945">1945</option>
+        <option value="1944">1944</option>
+        <option value="1943">1943</option>
+        <option value="1942">1942</option>
+        <option value="1941">1941</option>
+        <option value="1940">1940</option>
+        <option value="1939">1939</option>
+        <option value="1938">1938</option>
+        <option value="1937">1937</option>
+        <option value="1936">1936</option>
+        <option value="1935">1935</option>
+        <option value="1934">1934</option>
+        <option value="1933">1933</option>
+        <option value="1932">1932</option>
+        <option value="1931">1931</option>
+        <option value="1930">1930</option>
+        <option value="1929">1929</option>
+        <option value="1928">1928</option>
+        <option value="1927">1927</option>
+        <option value="1926">1926</option>
+        <option value="1925">1925</option>
+        <option value="1924">1924</option>
+        <option value="1923">1923</option>
+        <option value="1922">1922</option>
+      </select>
+      <img class="so so-3" src="./static/resource/184.png" o-animation="shrink" o-tap="next">
+    </div>
     <!-- 页面[page3]-->
-    <div class="page3 page" template="page3" style="display: none;"><img class="so so-0" src="./static/resource/1262.jpg"><video class="so so-1" src="https://cunchu.site/show/mp4/dandelion.mp4" controls="controls"></video><img class="so so-2" src="./static/resource/1332.png"><img class="so so-3" src="./static/resource/1331.png"><img class="so so-4" src="./static/resource/1336.png"><img class="so so-5" src="./static/resource/1328.png" o-animation="shrink" go="page4"></div>
+    <div class="page3 page" template="page3" style="display: none;">
+      <video class="so so-1" src="https://demos.run/71/jianji.mp4" poster="./static/resource/dangqi.jpg"></video>
+      <img class="so so-2" src="./static/resource/1332.png">
+      <img class="so so-4" src="./static/resource/1336.png" o-tap="replay">
+      <div class="text">我志愿加入中国共产党，拥护党的纲领，遵守党的章程，履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切，永不叛党。</div>
+      <img class="so so-5" src="./static/resource/1328.png" o-animation="shrink" go="page4//moveToLeft/moveFromRight/true">
+    </div>
     <!-- 页面[page4]-->
-    <div class="page4 page" template="page4" style="display: none;"><img class="so so-0" src="./static/resource/1375.png"><img class="so so-1" src="./static/resource/1292.png"><img class="so so-2" src="./static/resource/1300.png"><img class="so so-3" src="./static/resource/1308.png"><img class="so so-4" src="./static/resource/1262.png"><img class="so so-5" src="./static/resource/1268.png"></div></div>
-    
-<!-- 框架script文件 -->
-<script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-owo.script = {
-  "loading": {
-    "data": {
-      "imgList": [""]
-    },
-    "show": function show() {
-      var mum = owo.query('.num')[0];
-      var numBar = owo.query('.num-bar')[0];
-      this.preloadImages(this.data.imgList, function (e) {
-        setTimeout(function () {
-          owo.go('page1////true');
-        }, 500);
-      }, function (num) {
-        numBar.style.width = num + '%';
-        mum.innerHTML = num + '%';
-      });
-    },
-    "preloadImage": function preloadImage(src, successFn) {
-      var image = new Image();
-      image.src = src;
+    <div class="page4 page" template="page4" style="display: none;">
+      <img class="so so-2" src="./static/resource/1300.png" go="page3//moveToRight/moveFromLeft/true">
+      <img class="so so-3" src="./static/resource/1308.png">
+      <img class="so so-4" src="./static/resource/beijing.png">
+      <div class="num">12345</div>
+      <div class="dangling">62</div>
+      <div class="share">
+        <img src="./static/resource/beijing-2.png">
+      </div>
+    </div>
+  </div>
+  <!-- 插件[music]-->
+  <div class="music-menu owo-block" template="music" style="display: none;">
+    <img class="music-icon" src="https://cunchu.site/ozzx/resource/music.png" o-tap="switchPlay">
+  </div>
 
-      image.onload = function () {
-        successFn && successFn(src);
-      };
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    // 模块 music 的script代码
+    // 微信自动播放音乐
+    document.addEventListener("WeixinJSBridgeReady", function() {
+      owo.script.music.play();
+    }, false);
+    owo.script = {
+      "page1": {},
+      "page2": {
+        "data": {
+          "city": ""
+        },
+        "select": function select(city) {
+          var _this = this;
 
-      image.onerror = function (error) {
-        successFn && successFn(src);
-      };
-    },
-    "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
-      var _this = this;
-
-      if (!Array.isArray(srcs)) {
-        console.log('第一个参数只能是一个数组');
-      } else {
-        var allCount = srcs.length;
-        var doneCount = 0;
-        srcs.forEach(function (srcItem) {
-          _this.preloadImage(srcItem, function () {
-            doneCount++;
-            progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
-
-            if (doneCount === allCount) {
-              doneFn && doneFn();
-            }
+          this.data.city = city;
+          document.querySelector('.page4 .so-4').src = "./static/resource/" + city + ".png";
+          this.queryAll('.so-2 li').forEach(function(element) {
+            element.classList.remove('active');
           });
-        });
+          setTimeout(function() {
+            _this.$target.classList.add('active');
+          }, 0);
+        },
+        "next": function next() {
+          if (this.data.city != '') {
+            owo.go('page3//moveToLeft/moveFromRight/true');
+          } else {
+            owo.tool.toast('请先选择城市哦!');
+          }
+        }
+      },
+      "page3": {
+        "created": function created() {
+          var _this2 = this;
+
+          setTimeout(function() {
+            _this2.query('video').play();
+          }, 2000);
+        },
+        "replay": function replay() {
+          var video = this.query('video');
+          video.currentTime = 0;
+          video.play();
+        },
+        "leave": function leave() {
+          this.query('video').pause();
+        }
+      },
+      "page4": {
+        "created": function created() {
+          var cha = 2021 - parseInt(document.querySelector('.page2 .so-1').value);
+          this.query('.dangling').innerText = cha;
+        }
+      },
+      "music": {
+        "data": {
+          "music": null,
+          "musicIsPlay": false
+        },
+        "switchPlay": function switchPlay() {
+          this.data.musicIsPlay ? this.pause() : this.play();
+        },
+        "play": function play() {
+          console.log('播放音乐');
+
+          if (!this.data.musicIsPlay) {
+            this.data.musicIsPlay = true;
+            this.data.music = new Audio("./static/resource/music.mp3"); // this.data.music.volume = 0.2
+
+            this.data.music.loop = true;
+            this.data.music.play();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.add('active');
+          }
+        },
+        "pause": function pause() {
+          if (this.data.musicIsPlay) {
+            this.data.musicIsPlay = false;
+            this.data.music.pause();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.remove('active');
+          }
+        }
       }
-    }
-  },
-  "page1": {},
-  "page2": {},
-  "page3": {},
-  "page4": {}
-};
-</script>
+    };
+  </script>
 
-    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
 
-  </body>
+  <script src="./static/js/typing.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/toast.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+
 </html>

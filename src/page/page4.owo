@@ -1,14 +1,22 @@
 <template lang="pug">
 .page4
-  img.so.so-0(src="@|1375.png|")
-  img.so.so-1(src="@|1292.png|")
-  img.so.so-2(src="@|1300.png|")
+  //- img.so.so-0(src="@|1375.png|")
+  //- img.so.so-1(src="@|1292.png|")
+  img.so.so-2(src="@|1300.png|" go="page3//moveToRight/moveFromLeft/true")
   img.so.so-3(src="@|1308.png|")
-  img.so.so-4(src="@|1262.png|")
-  img.so.so-5(src="@|1268.png|")
+  img.so.so-4(src="@|beijing.png|")
+  //- img.so.so-5(src="@|1268.png|")
+  .num 12345
+  .dangling 62
+  .share
+    img(src="@|beijing-2.png|")
 </template>
 <script>
 module.exports = {
+  created: function () {
+    const cha = 2021 - parseInt(document.querySelector('.page2 .so-1').value)
+    this.query('.dangling').innerText = cha
+  }
 }
 </script>
 <style lang="less">
@@ -25,7 +33,7 @@ module.exports = {
 .so-2 {
   left: 44px;
   top: 1223px;
-  z-index: 3;
+  z-index: 120;
 }
 .so-3 {
   left: 414px;
@@ -41,5 +49,34 @@ module.exports = {
   left: 41px;
   top: 36px;
   z-index: 0;
+}
+.num {
+  position: absolute;
+  top: 1165px;
+  font-size: 30px;
+  z-index: 9;
+  left: 128px;
+  width: 140px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+.dangling {
+  position: absolute;
+  top: 1102px;
+  left: 100px;
+  z-index: 9;
+  font-size: 36px;
+  width: 60px;
+  text-align: center;
+  color: white;
+  line-height: 40px;
+}
+.share {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  opacity: 0;
 }
 </style>

@@ -2,41 +2,41 @@
 .page2
   img.so.so-0(src="@|136.png|")
   ul.so.so-2.clear
-    li(o-tap="select('北京')") 北京
-    li(o-tap="select('天津')") 天津
-    li(o-tap="select('上海')") 上海
-    li(o-tap="select('重庆')") 重庆
-    li(o-tap="select('河北')") 河北
-    li(o-tap="select('山西')") 山西
-    li(o-tap="select('辽宁')") 辽宁
-    li(o-tap="select('吉林')") 吉林
-    li(o-tap="select('黑龙江')") 黑龙江
-    li(o-tap="select('江苏')") 江苏
-    li(o-tap="select('浙江')") 浙江
-    li(o-tap="select('安徽')") 安徽
-    li(o-tap="select('福建')") 福建
-    li(o-tap="select('江西')") 江西
-    li(o-tap="select('山东')") 山东
-    li(o-tap="select('河南')") 河南
-    li(o-tap="select('湖北')") 湖北
-    li(o-tap="select('湖南')") 湖南
-    li(o-tap="select('广东')") 广东
-    li(o-tap="select('海南')") 海南
-    li(o-tap="select('四川')") 四川
-    li(o-tap="select('贵州')") 贵州
-    li(o-tap="select('云南')") 云南
-    li(o-tap="select('陕西')") 陕西
-    li(o-tap="select('甘肃')") 甘肃
-    li(o-tap="select('青海')") 青海
-    li(o-tap="select('内蒙古')") 内蒙古
-    li(o-tap="select('广西')") 广西
-    li(o-tap="select('西藏')") 西藏
-    li(o-tap="select('宁夏')") 宁夏
-    li(o-tap="select('新疆')") 新疆
-    li(o-tap="select('香港')") 香港
-    li(o-tap="select('澳门')") 澳门
-    li(o-tap="select('台湾')") 台湾
-    li(o-tap="select('海外')") 海外
+    li(o-tap="select('beijing')") 北京
+    li(o-tap="select('tianjin')") 天津
+    li(o-tap="select('shanghai')") 上海
+    li(o-tap="select('chongqing')") 重庆
+    li(o-tap="select('hebei')") 河北
+    li(o-tap="select('shanxi')") 山西
+    li(o-tap="select('liaoning')") 辽宁
+    li(o-tap="select('jilin')") 吉林
+    li(o-tap="select('heilongjiang')") 黑龙江
+    li(o-tap="select('jiangsu')") 江苏
+    li(o-tap="select('zhejiang')") 浙江
+    li(o-tap="select('anhui')") 安徽
+    li(o-tap="select('fujian')") 福建
+    li(o-tap="select('jiangxi')") 江西
+    li(o-tap="select('shandong')") 山东
+    li(o-tap="select('henan')") 河南
+    li(o-tap="select('hubei')") 湖北
+    li(o-tap="select('hunan')") 湖南
+    li(o-tap="select('guangdong')") 广东
+    li(o-tap="select('hainan')") 海南
+    li(o-tap="select('sichuan')") 四川
+    li(o-tap="select('guizhou')") 贵州
+    li(o-tap="select('yunnan')") 云南
+    li(o-tap="select('shanxi')") 陕西
+    li(o-tap="select('gansu')") 甘肃
+    li(o-tap="select('qinghai')") 青海
+    li(o-tap="select('neimenggu')") 内蒙古
+    li(o-tap="select('guangxi')") 广西
+    li(o-tap="select('xizang')") 西藏
+    li(o-tap="select('ningxia')") 宁夏
+    li(o-tap="select('xinjiang')") 新疆
+    li(o-tap="select('xianggang')") 香港
+    li(o-tap="select('aomen')") 澳门
+    li(o-tap="select('taiwan')") 台湾
+    li(o-tap="select('haiwai')") 海外
   select.so.so-1(type="month" id="start")
     option(value="2021") 2021
     option(value="2020") 2020
@@ -138,18 +138,39 @@
     option(value="1924") 1924
     option(value="1923") 1923
     option(value="1922") 1922
-  img.so.so-3(src="@|184.png|" o-animation="shrink" go="page3")
-  img.so.so-4(src="@|1304.jpg|")
+  img.so.so-3(src="@|184.png|" o-animation="shrink" o-tap="next")
 </template>
 <script>
 module.exports = {
+  data: {
+    "city": ""
+  },
+  select: function (city) {
+    this.data.city = city
+    document.querySelector('.page4 .so-4').src = `./static/resource/${city}.png`
+    this.queryAll('.so-2 li').forEach(element => {
+      element.classList.remove('active')
+    });
+    setTimeout(() => {
+      this.$target.classList.add('active')
+    }, 0);
+  },
+  next: function () {
+    if (this.data.city != '') {
+      owo.go('page3//moveToLeft/moveFromRight/true')
+    } else {
+      owo.tool.toast('请先选择城市哦!')
+    }
+  }
 }
 </script>
 <style lang="less">
+
 .so-0 {
   left: 92px;
-  top: 204px;
+  top: 185px;
   z-index: 4;
+  pointer-events: none;
 }
 .so-1 {
   left: 81px;
@@ -169,23 +190,28 @@ module.exports = {
   top: 399px;
   z-index: 8;
   background-image: url('@|132.png|');
-  width: 573px;
+  width: 563px;
   height: 759px;
   outline: none;
   background-color: transparent;
   font-size: 34px;
-  padding: 20px 10px;
+  padding: 20px 15px;
+  user-select: none;
   li {
     float: left;
     border: 2px solid #bb2e2a;
     width: 120px;
-    margin: 9px;
+    margin: 13px 8px;
     text-align: center;
     color: #bb2e2a;
     font-weight: bold;
     font-size: 30px;
     line-height: 54px;
     border-radius: 5px;
+  }
+  li.active {
+    background-color: #ffc7b3;
+    color: #900200;
   }
 }
 .so-3 {
