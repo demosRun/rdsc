@@ -2,7 +2,7 @@
 .page4
   //- img.so.so-0(src="@|1375.png|")
   //- img.so.so-1(src="@|1292.png|")
-  img.so.so-2(src="@|1300.png|" go="page3//moveToRight/moveFromLeft/true")
+  img.so.so-2(src="@|1300.png|" go="page2//moveToRight/moveFromLeft/true")
   img.so.so-3(src="@|1308.png|")
   img.so.so-4(src="@|beijing.png|")
   //- img.so.so-5(src="@|1268.png|")

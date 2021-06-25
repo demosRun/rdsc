@@ -1,12 +1,12 @@
 <template lang="pug">
 .page-1
-  img.so.so-0(src="@|1272.png|")
-  img.so.so-1(src="@|1294.png|")
+  //- img.so.so-0(src="@|1272.png|")
+  //- img.so.so-1(src="@|1294.png|")
   img.so.so-2(src="@|639.png|" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true")
-  img.so.so-3(src="@|1329.png|")
-  img.so.so-4(src="@|1266.png|")
-  img.so.so-5(src="@|1248.png|")
-  img.so.so-6(src="@|76.jpg|")
+  //- img.so.so-3(src="@|1329.png|")
+  //- img.so.so-4(src="@|1266.png|")
+  //- img.so.so-5(src="@|1248.png|")
+  img.so.so-6(src="@|page1.jpg|")
 </template>
 
 <script>
