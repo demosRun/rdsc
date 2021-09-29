@@ -1,6 +1,6 @@
 <template lang="pug">
 .page-1
-  //- img.so.so-0(src="@|1272.png|")
+  img.so.so-0(src="@|title.png|")
   //- img.so.so-1(src="@|1294.png|")
   img.so.so-2(src="@|639.png|" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true")
   //- img.so.so-3(src="@|1329.png|")
@@ -23,9 +23,11 @@
   position: absolute;
 }
 .so-0 {
-  left: 88px;
-  top: 22px;
+  left: 0;
+  top: 395px;
   z-index: 6;
+  right: 0;
+  margin: 0 auto;
 }
 .so-1 {
   left: 233px;
@@ -33,9 +35,11 @@
   z-index: 5;
 }
 .so-2 {
-  left: 250px;
-  top: 1205px;
+  top: 858px;
   z-index: 4;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .so-3 {
   left: 661px;

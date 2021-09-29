@@ -3,19 +3,31 @@
   //- img.so.so-0(src="@|1375.png|")
   //- img.so.so-1(src="@|1292.png|")
   img.so.so-2(src="@|1300.png|" go="page2//moveToRight/moveFromLeft/true")
-  img.so.so-3(src="@|1308.png|")
+  img.so.so-3(src="@|1308.png|" o-tap="showShare()")
   img.so.so-4(src="@|beijing.png|")
   //- img.so.so-5(src="@|1268.png|")
   .num 12345
   .dangling 62
   .share
-    img(src="@|beijing-2.png|")
+    <svg t="1632908532246" class="close" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1160" width="128" height="128"><path d="M512 1024C229.248 1024 0 794.752 0 512S229.248 0 512 0s512 229.248 512 512-229.248 512-512 512z m0-572.330667L300.629333 240.213333a42.538667 42.538667 0 0 0-60.16 0.213334 42.410667 42.410667 0 0 0-0.213333 60.16L451.669333 512 240.213333 723.370667a42.538667 42.538667 0 0 0 0.213334 60.16 42.410667 42.410667 0 0 0 60.16 0.213333L512 572.330667l211.370667 211.413333a42.538667 42.538667 0 0 0 60.16-0.213333 42.410667 42.410667 0 0 0 0.213333-60.16L572.330667 512l211.413333-211.370667a42.538667 42.538667 0 0 0-0.213333-60.16 42.410667 42.410667 0 0 0-60.16-0.213333L512 451.669333z" fill="#707070" p-id="1161"></path></svg>
+    img(src="@|beijing.png|")
 </template>
 <script>
 module.exports = {
+  data: {
+    "showShare": false
+  },
   created: function () {
     const cha = 2021 - parseInt(document.querySelector('.page2 .so-1').value)
     this.query('.dangling').innerText = cha
+  },
+  showShare: function () {
+    this.data.showShare = !this.data.showShare
+    if (this.data.showShare) {
+      this.query('.share').style.display = 'block'
+    } else {
+      this.query('.share').style.display = 'none'
+    }
   }
 }
 </script>
@@ -32,13 +44,13 @@ module.exports = {
 }
 .so-2 {
   left: 44px;
-  top: 1223px;
+  top: 1245px;
   z-index: 120;
 }
 .so-3 {
   left: 414px;
-  top: 1224px;
-  z-index: 2;
+  top: 1245px;
+  z-index: 12;
 }
 .so-4 {
   left: 0px;
@@ -77,6 +89,26 @@ module.exports = {
   left: 0;
   top: 0;
   z-index: 99;
-  opacity: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.6);
+  img {
+    height: 65%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+.close {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 214px;
+  z-index: 9;
+  margin: auto;
 }
 </style>
