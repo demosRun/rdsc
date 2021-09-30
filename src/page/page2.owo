@@ -1,64 +1,20 @@
 <template lang="pug">
 .page2
-  img.so.so-0(src="@|136.png|")
-  ul.so.so-2.clear
-    li(o-tap="select('beijing')") 北京
-    li(o-tap="select('tianjin')") 天津
-    li(o-tap="select('shanghai')") 上海
-    li(o-tap="select('chongqing')") 重庆
-    li(o-tap="select('hebei')") 河北
-    li(o-tap="select('shanxi')") 山西
-    li(o-tap="select('liaoning')") 辽宁
-    li(o-tap="select('jilin')") 吉林
-    li(o-tap="select('heilongjiang')") 黑龙江
-    li(o-tap="select('jiangsu')") 江苏
-    li(o-tap="select('zhejiang')") 浙江
-    li(o-tap="select('anhui')") 安徽
-    li(o-tap="select('fujian')") 福建
-    li(o-tap="select('jiangxi')") 江西
-    li(o-tap="select('shandong')") 山东
-    li(o-tap="select('henan')") 河南
-    li(o-tap="select('hubei')") 湖北
-    li(o-tap="select('hunan')") 湖南
-    li(o-tap="select('guangdong')") 广东
-    li(o-tap="select('hainan')") 海南
-    li(o-tap="select('sichuan')") 四川
-    li(o-tap="select('guizhou')") 贵州
-    li(o-tap="select('yunnan')") 云南
-    li(o-tap="select('shanxi')") 陕西
-    li(o-tap="select('gansu')") 甘肃
-    li(o-tap="select('qinghai')") 青海
-    li(o-tap="select('neimenggu')") 内蒙古
-    li(o-tap="select('guangxi')") 广西
-    li(o-tap="select('xizang')") 西藏
-    li(o-tap="select('ningxia')") 宁夏
-    li(o-tap="select('xinjiang')") 新疆
-    li(o-tap="select('xianggang')") 香港
-    li(o-tap="select('aomen')") 澳门
-    li(o-tap="select('taiwan')") 台湾
-  img.so.so-3(src="@|184.png|" o-animation="shrink" o-tap="next")
+  
 </template>
 <script>
 module.exports = {
-  data: {
-    "city": ""
-  },
-  select: function (city) {
-    this.data.city = city
-    document.querySelector('.page4 .so-4').src = `./static/resource/${city}.png`
-    this.queryAll('.so-2 li').forEach(element => {
-      element.classList.remove('active')
-    });
+  show: function () {
+    let cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang", "xianggang", "aomen", "taiwan"]
+    let picList = ["@|beijing.jpg|", "@|tianjin.jpg|", "@|shanghai.jpg|", "@|chongqing.jpg|", "@|hebei.jpg|", "@|shanxi.jpg|", "@|liaoning.jpg|", "@|jilin.jpg|", "@|heilongjiang.jpg|", "@|jiangsu.jpg|", "@|zhejiang.jpg|", "@|anhui.jpg|", "@|fujian.jpg|", "@|jiangxi.jpg|", "@|shandong.jpg|", "@|henan.jpg|", "@|hubei.jpg|", "@|hunan.jpg|", "@|guangdong.jpg|", "@|hainan.jpg|", "@|sichuan.jpg|", "@|guizhou.jpg|", "@|yunnan.jpg|", "@|shanxi.jpg|", "@|gansu.jpg|", "@|qinghai.jpg|", "@|neimenggu.jpg|", "@|guangxi.jpg|", "@|xizang.jpg|", "@|ningxia.jpg|", "@|xinjiang.jpg|", "@|xianggang.jpg|", "@|aomen.jpg|", "@|taiwan.jpg|"]
+    
     setTimeout(() => {
-      this.$target.classList.add('active')
-    }, 0);
-  },
-  next: function () {
-    if (this.data.city != '') {
+      activeCity = cityList[randomNum(0, cityList.length - 1)]
+      document.querySelector('.page4 .so-4').src = `./static/images/${activeCity}.jpg`
+    }, 800);
+    setTimeout(() => {
       owo.go('page4//moveToLeft/moveFromRight/true')
-    } else {
-      owo.tool.toast('请先选择城市哦!')
-    }
+    }, 2000);
   }
 }
 </script>

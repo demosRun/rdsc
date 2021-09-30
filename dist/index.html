@@ -30,13 +30,11 @@
   <body>
     <div class="scale-box">
     <!-- 页面[page1]-->
-    <div class="page-1 page" template="page1" style="display: none;"><img class="so so-0" src="./static/resource/title.png"><img class="so so-2" src="./static/resource/639.png" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true"><img class="so so-6" src="./static/resource/page1.jpg"></div>
+    <div class="page-1 page" template="page1" style="display: none;"><img class="so so-0" src="./static/images/title.png"><img class="so so-2" src="./static/images/639.png" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true"><img class="so so-6" src="./static/images/page1.jpg"></div>
     <!-- 页面[page2]-->
-    <div class="page2 page" template="page2" style="display: none;"><img class="so so-0" src="./static/resource/136.png"><ul class="so so-2 clear"><li o-tap="select('beijing')">北京</li><li o-tap="select('tianjin')">天津</li><li o-tap="select('shanghai')">上海</li><li o-tap="select('chongqing')">重庆</li><li o-tap="select('hebei')">河北</li><li o-tap="select('shanxi')">山西</li><li o-tap="select('liaoning')">辽宁</li><li o-tap="select('jilin')">吉林</li><li o-tap="select('heilongjiang')">黑龙江</li><li o-tap="select('jiangsu')">江苏</li><li o-tap="select('zhejiang')">浙江</li><li o-tap="select('anhui')">安徽</li><li o-tap="select('fujian')">福建</li><li o-tap="select('jiangxi')">江西</li><li o-tap="select('shandong')">山东</li><li o-tap="select('henan')">河南</li><li o-tap="select('hubei')">湖北</li><li o-tap="select('hunan')">湖南</li><li o-tap="select('guangdong')">广东</li><li o-tap="select('hainan')">海南</li><li o-tap="select('sichuan')">四川</li><li o-tap="select('guizhou')">贵州</li><li o-tap="select('yunnan')">云南</li><li o-tap="select('shanxi')">陕西</li><li o-tap="select('gansu')">甘肃</li><li o-tap="select('qinghai')">青海</li><li o-tap="select('neimenggu')">内蒙古</li><li o-tap="select('guangxi')">广西</li><li o-tap="select('xizang')">西藏</li><li o-tap="select('ningxia')">宁夏</li><li o-tap="select('xinjiang')">新疆</li><li o-tap="select('xianggang')">香港</li><li o-tap="select('aomen')">澳门</li><li o-tap="select('taiwan')">台湾</li></ul><img class="so so-3" src="./static/resource/184.png" o-animation="shrink" o-tap="next"></div>
-    <!-- 页面[page3]-->
-    <div class="page3 page" template="page3" style="display: none;"><video class="so so-1" src="https://demos.run/71/jianji.mp4" poster="./static/resource/dangqi.jpg"></video><img class="so so-2" src="./static/resource/1332.png"><img class="so so-4" src="./static/resource/1336.png" o-tap="replay"><div class="text">我志愿加入中国共产党，拥护党的纲领，遵守党的章程，履行党员义务，执行党的决定，严守党的纪律，保守党的秘密，对党忠诚，积极工作，为共产主义奋斗终身，随时准备为党和人民牺牲一切，永不叛党。</div><img class="so so-5" src="./static/resource/1328.png" o-animation="shrink" go="page4//moveToLeft/moveFromRight/true"></div>
+    <div class="page2 page" template="page2" style="display: none;"></div>
     <!-- 页面[page4]-->
-    <div class="page4 page" template="page4" style="display: none;"><img class="so so-2" src="./static/resource/1300.png" go="page2//moveToRight/moveFromLeft/true"><img class="so so-3" src="./static/resource/1308.png" o-tap="showShare()"><img class="so so-4" src="./static/resource/beijing.png"><div class="num">12345</div><div class="dangling">62</div><div class="share"><img src="./static/resource/beijing.png"></div></div></div>
+    <div class="page4 page" template="page4" style="display: none;"><img class="so so-2" src="./static/images/1300.png" go="page2//moveToRight/moveFromLeft/true"><img class="so so-3" src="./static/images/1308.png" o-tap="showShare()"><img class="so so-4" src="./static/images/beijing.jpg"><div class="num">12345</div><div class="share" o-tap="showShare()" style="display:none;"><img src="./static/images/beijing.jpg"></div><canvas id="canvas" width="750" height="1508"></canvas></div></div>
     <!-- 插件[music]-->
     <div class="music-menu owo-block" template="music" style="display: none;"><img class="music-icon" src="https://cunchu.site/ozzx/resource/music.png" o-tap="switchPlay"></div>
     
@@ -51,48 +49,16 @@ document.addEventListener("WeixinJSBridgeReady", function () {
 owo.script = {
   "page1": {},
   "page2": {
-    "data": {
-      "city": ""
-    },
-    "select": function select(city) {
-      var _this = this;
-
-      this.data.city = city;
-      document.querySelector('.page4 .so-4').src = "./static/resource/" + city + ".png";
-      this.queryAll('.so-2 li').forEach(function (element) {
-        element.classList.remove('active');
-      });
-      setTimeout(function () {
-        _this.$target.classList.add('active');
-      }, 0);
-    },
-    "next": function next() {
-      if (this.data.city != '') {
-        owo.go('page4//moveToLeft/moveFromRight/true');
-      } else {
-        owo.tool.toast('请先选择城市哦!');
-      }
-    }
-  },
-  "page3": {
-    "created": function created() {
-      var _this2 = this;
-
-      setTimeout(function () {
-        _this2.query('video').play();
-      }, 1000);
-    },
-    "replay": function replay() {
-      var video = this.query('video');
-      video.currentTime = 0;
-      video.play();
-    },
     "show": function show() {
-      owo.script.music.pause();
-    },
-    "leave": function leave() {
-      this.query('video').pause();
-      owo.script.music.play();
+      var cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang", "xianggang", "aomen", "taiwan"];
+      var picList = ["./static/images/beijing.jpg", "./static/images/tianjin.jpg", "./static/images/shanghai.jpg", "./static/images/chongqing.jpg", "./static/images/hebei.jpg", "./static/images/shanxi.jpg", "./static/images/liaoning.jpg", "./static/images/jilin.jpg", "./static/images/heilongjiang.jpg", "./static/images/jiangsu.jpg", "./static/images/zhejiang.jpg", "./static/images/anhui.jpg", "./static/images/fujian.jpg", "./static/images/jiangxi.jpg", "./static/images/shandong.jpg", "./static/images/henan.jpg", "./static/images/hubei.jpg", "./static/images/hunan.jpg", "./static/images/guangdong.jpg", "./static/images/hainan.jpg", "./static/images/sichuan.jpg", "./static/images/guizhou.jpg", "./static/images/yunnan.jpg", "./static/images/shanxi.jpg", "./static/images/gansu.jpg", "./static/images/qinghai.jpg", "./static/images/neimenggu.jpg", "./static/images/guangxi.jpg", "./static/images/xizang.jpg", "./static/images/ningxia.jpg", "./static/images/xinjiang.jpg", "./static/images/xianggang.jpg", "./static/images/aomen.jpg", "./static/images/taiwan.jpg"];
+      setTimeout(function () {
+        activeCity = cityList[randomNum(0, cityList.length - 1)];
+        document.querySelector('.page4 .so-4').src = "./static/images/" + activeCity + ".jpg";
+      }, 800);
+      setTimeout(function () {
+        owo.go('page4//moveToLeft/moveFromRight/true');
+      }, 2000);
     }
   },
   "page4": {
@@ -100,8 +66,32 @@ owo.script = {
       "showShare": false
     },
     "created": function created() {
-      var cha = 2021 - parseInt(document.querySelector('.page2 .so-1').value);
-      this.query('.dangling').innerText = cha;
+      this.query('.num').innerText = myNum;
+    },
+    "show": function show() {
+      setTimeout(function () {
+        var canvas = oCanvas.create({
+          canvas: "#canvas"
+        });
+        canvas.addChild(canvas.display.image({
+          x: 0,
+          y: 0,
+          width: 750,
+          height: 1508,
+          // origin: { x: "center", y: "center" },
+          image: './static/images/beijing.jpg'
+        }));
+        canvas.addChild(canvas.display.text({
+          x: 0,
+          y: 0,
+          width: 200,
+          font: "bold 38px sans-serif",
+          size: 30,
+          // origin: { x: "center", y: "top" },
+          text: 'sdsdasdasd',
+          fill: "#616160"
+        }));
+      }, 0);
     },
     "showShare": function showShare() {
       this.data.showShare = !this.data.showShare;
@@ -126,7 +116,7 @@ owo.script = {
 
       if (!this.data.musicIsPlay) {
         this.data.musicIsPlay = true;
-        this.data.music = new Audio("./static/resource/music.mp3"); // this.data.music.volume = 0.2
+        this.data.music = new Audio("./static/images/music.mp3"); // this.data.music.volume = 0.2
 
         this.data.music.loop = true;
         this.data.music.play();
@@ -149,6 +139,7 @@ owo.script = {
     <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
     <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript"  charset="UTF-8"></script>
     <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
+    <script src="./static/js/ocanvas.min.js" type="text/javascript"  charset="UTF-8"></script>
 
     <script src="./static/js/typing.js" type="text/javascript"  charset="UTF-8"></script>
     <script src="./static/js/toast.js" type="text/javascript"  charset="UTF-8"></script>

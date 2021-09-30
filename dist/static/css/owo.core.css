@@ -136,14 +136,14 @@ li {
   font-size: 32px;
   padding: 0 15px;
   outline: none;
-  background-image: url('../resource/1287.png');
+  background-image: url('../images/1287.png');
 }
 
 .page2 .so-2 {
   left: 81px;
   top: 399px;
   z-index: 8;
-  background-image: url('../resource/132.png');
+  background-image: url('../images/132.png');
   width: 563px;
   height: 759px;
   outline: none;
@@ -185,59 +185,6 @@ li {
   top: 0px;
   z-index: 0;
 }
-.page3 .so-0 {
-  left: 0px;
-  top: 0px;
-  z-index: 0;
-}
-
-.page3 .so-1 {
-  left: 57px;
-  top: 296px;
-  z-index: 4;
-  width: 636px;
-  height: 358px;
-}
-
-.page3 .so-2 {
-  left: 274px;
-  top: 722px;
-  z-index: 3;
-}
-
-.page3 .so-3 {
-  left: 57px;
-  top: 809px;
-  z-index: 2;
-}
-
-.page3 .so-4 {
-  left: 297px;
-  top: 1163px;
-  z-index: 1;
-}
-
-.page3 .so-5 {
-  left: 189px;
-  top: 1220px;
-  z-index: 0;
-}
-
-.page3 .text {
-  position: absolute;
-  top: 810px;
-  width: 87%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  font-size: 33px;
-  line-height: 1.6;
-  color: #3a0900;
-  text-indent: 2em;
-  letter-spacing: 4px;
-  font-family: "STKaiti";
-  font-weight: bold;
-}
 .page4 .so-0 {
   left: 535px;
   top: 1013px;
@@ -257,7 +204,7 @@ li {
 }
 
 .page4 .so-3 {
-  left: 414px;
+  left: 317px;
   top: 1245px;
   z-index: 12;
 }
@@ -276,10 +223,10 @@ li {
 
 .page4 .num {
   position: absolute;
-  top: 1165px;
-  font-size: 30px;
+  top: 1149px;
+  font-size: 36px;
   z-index: 9;
-  left: 128px;
+  left: 139px;
   width: 140px;
   text-align: center;
   line-height: 40px;
@@ -326,6 +273,19 @@ li {
   bottom: 214px;
   z-index: 9;
   margin: auto;
+}
+
+.page4 #canvas {
+  width: 750px;
+  height: 1508px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .music-menu {
   position: absolute;

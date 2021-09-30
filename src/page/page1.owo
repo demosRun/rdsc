@@ -12,7 +12,7 @@
 <script>
   module.exports = {
     created: function () {
-
+      
     }
   }
 </script>

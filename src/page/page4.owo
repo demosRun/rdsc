@@ -4,12 +4,12 @@
   //- img.so.so-1(src="@|1292.png|")
   img.so.so-2(src="@|1300.png|" go="page2//moveToRight/moveFromLeft/true")
   img.so.so-3(src="@|1308.png|" o-tap="showShare()")
-  img.so.so-4(src="@|beijing.png|")
+  img.so.so-4(src="@|beijing.jpg|")
   //- img.so.so-5(src="@|1268.png|")
   .num 12345
-  .dangling 62
-  .share
-    img(src="@|beijing.png|")
+  .share(o-tap="showShare()" style="display:none;")
+    img(src="@|beijing.jpg|")
+  canvas#canvas(width="750" height="1508")
 </template>
 <script>
 module.exports = {
@@ -17,8 +17,33 @@ module.exports = {
     "showShare": false
   },
   created: function () {
-    const cha = 2021 - parseInt(document.querySelector('.page2 .so-1').value)
-    this.query('.dangling').innerText = cha
+    this.query('.num').innerText = myNum
+  },
+  show: function () {
+    setTimeout(() => {
+      var canvas = oCanvas.create({
+        canvas: "#canvas"
+      });
+
+      canvas.addChild(canvas.display.image({
+        x: 0,
+        y: 0,
+        width: 750,
+        height: 1508,
+        // origin: { x: "center", y: "center" },
+        image: '@|beijing.jpg|'
+      }))
+      canvas.addChild(canvas.display.text({
+        x: 0,
+        y: 0,
+        width: 200,
+        font: "bold 38px sans-serif",
+        size: 30,
+        // origin: { x: "center", y: "top" },
+        text: 'sdsdasdasd',
+        fill: "#616160"
+      }))
+    }, 0);
   },
   showShare: function () {
     this.data.showShare = !this.data.showShare
@@ -47,7 +72,7 @@ module.exports = {
   z-index: 120;
 }
 .so-3 {
-  left: 414px;
+  left: 317px;
   top: 1245px;
   z-index: 12;
 }
@@ -63,10 +88,10 @@ module.exports = {
 }
 .num {
   position: absolute;
-  top: 1165px;
-  font-size: 30px;
+  top: 1149px;
+  font-size: 36px;
   z-index: 9;
-  left: 128px;
+  left: 139px;
   width: 140px;
   text-align: center;
   line-height: 40px;
@@ -109,5 +134,16 @@ module.exports = {
   bottom: 214px;
   z-index: 9;
   margin: auto;
+}
+#canvas {
+  width: 750px;
+  height: 1508px;
+  width: 750px;
+  height: 1508px;
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
 </style>
