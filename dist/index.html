@@ -79,17 +79,18 @@ owo.script = {
           width: 750,
           height: 1508,
           // origin: { x: "center", y: "center" },
-          image: './static/images/beijing.jpg'
+          image: './static/images/test.jpg'
         }));
+        var text = '1111';
         canvas.addChild(canvas.display.text({
-          x: 0,
-          y: 0,
+          x: 200 - text.length * 8.5,
+          y: 1220,
           width: 200,
           font: "bold 38px sans-serif",
-          size: 30,
+          size: 36,
           // origin: { x: "center", y: "top" },
-          text: 'sdsdasdasd',
-          fill: "#616160"
+          text: text,
+          fill: "#fff"
         }));
       }, 0);
     },

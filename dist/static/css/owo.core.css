@@ -280,7 +280,6 @@ li {
   height: 1508px;
   position: absolute;
   z-index: 999;
-  opacity: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
