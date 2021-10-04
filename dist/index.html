@@ -1,148 +1,174 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <!-- 页面的元信息 -->
-    <title>{TAG_14226_TAG}</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    
-      <!-- 页面主样式文件 -->
-      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.core.css">
-      
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-      
-  </head>
-  <body>
-    <div class="scale-box">
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
     <!-- 页面[page1]-->
-    <div class="page-1 page" template="page1" style="display: none;"><img class="so so-0" src="./static/images/title.png"><img class="so so-2" src="./static/images/639.png" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true"><img class="so so-6" src="./static/images/page1.jpg"></div>
+    <div class="page-1 page" template="page1" style="display: none;">
+      <img class="so so-0" src="./static/resource/title.png">
+      <img class="so so-2" src="./static/resource/639.png" o-animation="shrink" go="page2//moveToLeft/moveFromRight/true">
+      <img class="so so-6" src="./static/resource/page1.jpg">
+    </div>
     <!-- 页面[page2]-->
-    <div class="page2 page" template="page2" style="display: none;"></div>
+    <div class="page2 page" template="page2" style="display: none;">
+      <img src="./static/resource/loading.gif">
+    </div>
     <!-- 页面[page4]-->
-    <div class="page4 page" template="page4" style="display: none;"><img class="so so-2" src="./static/images/1300.png" go="page2//moveToRight/moveFromLeft/true"><img class="so so-3" src="./static/images/1308.png" o-tap="showShare()"><img class="so so-4" src="./static/images/beijing.jpg"><div class="num">12345</div><div class="share" o-tap="showShare()" style="display:none;"><img src="./static/images/beijing.jpg"></div><canvas id="canvas" width="750" height="1508"></canvas></div></div>
-    <!-- 插件[music]-->
-    <div class="music-menu owo-block" template="music" style="display: none;"><img class="music-icon" src="https://cunchu.site/ozzx/resource/music.png" o-tap="switchPlay"></div>
-    
-<!-- 框架script文件 -->
-<script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-// 模块 music 的script代码
-// 微信自动播放音乐
-document.addEventListener("WeixinJSBridgeReady", function () {
-  owo.script.music.play();
-}, false);
-owo.script = {
-  "page1": {},
-  "page2": {
-    "show": function show() {
-      var cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang", "xianggang", "aomen", "taiwan"];
-      var picList = ["./static/images/beijing.jpg", "./static/images/tianjin.jpg", "./static/images/shanghai.jpg", "./static/images/chongqing.jpg", "./static/images/hebei.jpg", "./static/images/shanxi.jpg", "./static/images/liaoning.jpg", "./static/images/jilin.jpg", "./static/images/heilongjiang.jpg", "./static/images/jiangsu.jpg", "./static/images/zhejiang.jpg", "./static/images/anhui.jpg", "./static/images/fujian.jpg", "./static/images/jiangxi.jpg", "./static/images/shandong.jpg", "./static/images/henan.jpg", "./static/images/hubei.jpg", "./static/images/hunan.jpg", "./static/images/guangdong.jpg", "./static/images/hainan.jpg", "./static/images/sichuan.jpg", "./static/images/guizhou.jpg", "./static/images/yunnan.jpg", "./static/images/shanxi.jpg", "./static/images/gansu.jpg", "./static/images/qinghai.jpg", "./static/images/neimenggu.jpg", "./static/images/guangxi.jpg", "./static/images/xizang.jpg", "./static/images/ningxia.jpg", "./static/images/xinjiang.jpg", "./static/images/xianggang.jpg", "./static/images/aomen.jpg", "./static/images/taiwan.jpg"];
-      setTimeout(function () {
-        activeCity = cityList[randomNum(0, cityList.length - 1)];
-        document.querySelector('.page4 .so-4').src = "./static/images/" + activeCity + ".jpg";
-      }, 800);
-      setTimeout(function () {
-        owo.go('page4//moveToLeft/moveFromRight/true');
-      }, 2000);
-    }
-  },
-  "page4": {
-    "data": {
-      "showShare": false
-    },
-    "created": function created() {
-      this.query('.num').innerText = myNum;
-    },
-    "show": function show() {
-      setTimeout(function () {
-        var canvas = oCanvas.create({
-          canvas: "#canvas"
-        });
-        canvas.addChild(canvas.display.image({
-          x: 0,
-          y: 0,
-          width: 750,
-          height: 1508,
-          // origin: { x: "center", y: "center" },
-          image: './static/images/test.jpg'
-        }));
-        var text = '1111';
-        canvas.addChild(canvas.display.text({
-          x: 200 - text.length * 8.5,
-          y: 1220,
-          width: 200,
-          font: "bold 38px sans-serif",
-          size: 36,
-          // origin: { x: "center", y: "top" },
-          text: text,
-          fill: "#fff"
-        }));
-      }, 0);
-    },
-    "showShare": function showShare() {
-      this.data.showShare = !this.data.showShare;
+    <div class="page4 page" template="page4" style="display: none;">
+      <img class="so so-2" src="./static/resource/1300.png" go="page2//moveToRight/moveFromLeft/true">
+      <img class="so so-3" src="./static/resource/1308.png" o-tap="showShare()">
+      <img class="so so-4" src="./static/resource/beijing.jpg">
+      <div class="num">12345</div>
+      <div class="share" o-tap="showShare()" style="display:none;">
+        <img src="./static/resource/beijing.jpg">
+      </div><canvas id="canvas" width="750" height="1508"></canvas>
+    </div>
+  </div>
+  <!-- 插件[music]-->
+  <div class="music-menu owo-block" template="music" style="display: none;">
+    <img class="music-icon" src="https://cunchu.site/ozzx/resource/music.png" o-tap="switchPlay">
+  </div>
 
-      if (this.data.showShare) {
-        this.query('.share').style.display = 'block';
-      } else {
-        this.query('.share').style.display = 'none';
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    // 模块 music 的script代码
+    // 微信自动播放音乐
+    document.addEventListener("WeixinJSBridgeReady", function() {
+      owo.script.music.play();
+    }, false);
+    owo.script = {
+      "page1": {},
+      "page2": {
+        "show": function show() {
+          var cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang"];
+          var picList = ["./static/resource/beijing.jpg", "./static/resource/tianjin.jpg", "./static/resource/shanghai.jpg", "./static/resource/chongqing.jpg", "./static/resource/hebei.jpg", "./static/resource/shanxi.jpg", "./static/resource/liaoning.jpg", "./static/resource/jilin.jpg", "./static/resource/heilongjiang.jpg", "./static/resource/jiangsu.jpg", "./static/resource/zhejiang.jpg", "./static/resource/anhui.jpg", "./static/resource/fujian.jpg", "./static/resource/jiangxi.jpg", "./static/resource/shandong.jpg", "./static/resource/henan.jpg", "./static/resource/hubei.jpg", "./static/resource/hunan.jpg", "./static/resource/guangdong.jpg", "./static/resource/hainan.jpg", "./static/resource/sichuan.jpg", "./static/resource/guizhou.jpg", "./static/resource/yunnan.jpg", "./static/resource/shanxi.jpg", "./static/resource/gansu.jpg", "./static/resource/qinghai.jpg", "./static/resource/neimenggu.jpg", "./static/resource/guangxi.jpg", "./static/resource/xizang.jpg", "./static/resource/ningxia.jpg", "./static/resource/xinjiang.jpg"];
+          setTimeout(function() {
+            activeCity = cityList[randomNum(0, cityList.length - 1)];
+            document.querySelector('.page4 .so-4').src = "./static/resource/" + activeCity + ".jpg";
+            document.querySelector('.share img').src = "./static/resource/" + activeCity + "-2.jpg";
+          }, 800);
+          setTimeout(function() {
+            owo.go('page4//moveToLeft/moveFromRight/true');
+          }, 2000);
+        }
+      },
+      "page4": {
+        "data": {
+          "showShare": false
+        },
+        "created": function created() {
+          this.query('.num').innerText = myNum;
+        },
+        "show": function show() {
+          var _this = this;
+
+          setTimeout(function() {
+            var canvas = oCanvas.create({
+              canvas: "#canvas"
+            });
+            canvas.addChild(canvas.display.image({
+              x: 0,
+              y: 0,
+              width: 750,
+              height: 1508,
+              // origin: { x: "center", y: "center" },
+              image: _this.query('.share img').src
+            }));
+            var text = String(myNum);
+            canvas.addChild(canvas.display.text({
+              x: 200 - text.length * 8.5,
+              y: 1250,
+              width: 200,
+              font: "bold 38px sans-serif",
+              size: 36,
+              // origin: { x: "center", y: "top" },
+              text: text,
+              fill: "#fff"
+            }));
+            setTimeout(function() {
+              document.querySelector('.share img').src = _this.query('canvas').toDataURL("image/png");
+            }, 100);
+          }, 1000);
+        },
+        "showShare": function showShare() {
+          this.data.showShare = !this.data.showShare;
+
+          if (this.data.showShare) {
+            this.query('.share').style.display = 'block';
+          } else {
+            this.query('.share').style.display = 'none';
+          }
+        }
+      },
+      "music": {
+        "data": {
+          "music": null,
+          "musicIsPlay": false
+        },
+        "switchPlay": function switchPlay() {
+          this.data.musicIsPlay ? this.pause() : this.play();
+        },
+        "play": function play() {
+          console.log('播放音乐');
+
+          if (!this.data.musicIsPlay) {
+            this.data.musicIsPlay = true;
+            this.data.music = new Audio("./static/resource/music.mp3"); // this.data.music.volume = 0.2
+
+            this.data.music.loop = true;
+            this.data.music.play();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.add('active');
+          }
+        },
+        "pause": function pause() {
+          if (this.data.musicIsPlay) {
+            this.data.musicIsPlay = false;
+            this.data.music.pause();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.remove('active');
+          }
+        }
       }
-    }
-  },
-  "music": {
-    "data": {
-      "music": null,
-      "musicIsPlay": false
-    },
-    "switchPlay": function switchPlay() {
-      this.data.musicIsPlay ? this.pause() : this.play();
-    },
-    "play": function play() {
-      console.log('播放音乐');
+    };
+  </script>
 
-      if (!this.data.musicIsPlay) {
-        this.data.musicIsPlay = true;
-        this.data.music = new Audio("./static/images/music.mp3"); // this.data.music.volume = 0.2
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/ocanvas.min.js" type="text/javascript" charset="UTF-8"></script>
 
-        this.data.music.loop = true;
-        this.data.music.play();
-        var icon = document.getElementsByClassName('music-icon')[0];
-        icon.classList.add('active');
-      }
-    },
-    "pause": function pause() {
-      if (this.data.musicIsPlay) {
-        this.data.musicIsPlay = false;
-        this.data.music.pause();
-        var icon = document.getElementsByClassName('music-icon')[0];
-        icon.classList.remove('active');
-      }
-    }
-  }
-};
-</script>
+  <script src="./static/js/typing.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/toast.js" type="text/javascript" charset="UTF-8"></script>
+</body>
 
-    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/ocanvas.min.js" type="text/javascript"  charset="UTF-8"></script>
-
-    <script src="./static/js/typing.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/toast.js" type="text/javascript"  charset="UTF-8"></script>
-  </body>
 </html>

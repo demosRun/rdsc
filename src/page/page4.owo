@@ -20,7 +20,10 @@ module.exports = {
     this.query('.num').innerText = myNum
   },
   show: function () {
-    setTimeout(() => {
+  },
+  showShare: function () {
+    this.data.showShare = !this.data.showShare
+    if (this.data.showShare) {
       var canvas = oCanvas.create({
         canvas: "#canvas"
       });
@@ -31,12 +34,12 @@ module.exports = {
         width: 750,
         height: 1508,
         // origin: { x: "center", y: "center" },
-        image: '@|test.jpg|'
+        image: this.query('.share img').src
       }))
-      let text = '1111'
+      let text = String(myNum)
       canvas.addChild(canvas.display.text({
         x: 200 - (text.length * 8.5),
-        y: 1220,
+        y: 1250,
         width: 200,
         font: "bold 38px sans-serif",
         size: 36,
@@ -44,12 +47,10 @@ module.exports = {
         text: text,
         fill: "#fff"
       }))
-    }, 0);
-  },
-  showShare: function () {
-    this.data.showShare = !this.data.showShare
-    if (this.data.showShare) {
-      this.query('.share').style.display = 'block'
+      document.querySelector('.share img').src = this.query('canvas').toDataURL("image/png")
+      setTimeout(() => {
+        this.query('.share').style.display = 'block'
+      }, 100);
     } else {
       this.query('.share').style.display = 'none'
     }
@@ -143,7 +144,7 @@ module.exports = {
   height: 1508px;
   position: absolute;
   z-index: 999;
-  // opacity: 0;
+  opacity: 0;
   user-select: none;
   pointer-events: none;
 }

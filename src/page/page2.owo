@@ -1,16 +1,17 @@
 <template lang="pug">
 .page2
-  
+  img(src="@|loading.gif|")
 </template>
 <script>
 module.exports = {
   show: function () {
-    let cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang", "xianggang", "aomen", "taiwan"]
-    let picList = ["@|beijing.jpg|", "@|tianjin.jpg|", "@|shanghai.jpg|", "@|chongqing.jpg|", "@|hebei.jpg|", "@|shanxi.jpg|", "@|liaoning.jpg|", "@|jilin.jpg|", "@|heilongjiang.jpg|", "@|jiangsu.jpg|", "@|zhejiang.jpg|", "@|anhui.jpg|", "@|fujian.jpg|", "@|jiangxi.jpg|", "@|shandong.jpg|", "@|henan.jpg|", "@|hubei.jpg|", "@|hunan.jpg|", "@|guangdong.jpg|", "@|hainan.jpg|", "@|sichuan.jpg|", "@|guizhou.jpg|", "@|yunnan.jpg|", "@|shanxi.jpg|", "@|gansu.jpg|", "@|qinghai.jpg|", "@|neimenggu.jpg|", "@|guangxi.jpg|", "@|xizang.jpg|", "@|ningxia.jpg|", "@|xinjiang.jpg|", "@|xianggang.jpg|", "@|aomen.jpg|", "@|taiwan.jpg|"]
+    let cityList = ["beijing", "tianjin", "shanghai", "chongqing", "hebei", "shanxi", "liaoning", "jilin", "heilongjiang", "jiangsu", "zhejiang", "anhui", "fujian", "jiangxi", "shandong", "henan", "hubei", "hunan", "guangdong", "hainan", "sichuan", "guizhou", "yunnan", "shanxi", "gansu", "qinghai", "neimenggu", "guangxi", "xizang", "ningxia", "xinjiang"]
+    let picList = ["@|beijing.jpg|", "@|tianjin.jpg|", "@|shanghai.jpg|", "@|chongqing.jpg|", "@|hebei.jpg|", "@|shanxi.jpg|", "@|liaoning.jpg|", "@|jilin.jpg|", "@|heilongjiang.jpg|", "@|jiangsu.jpg|", "@|zhejiang.jpg|", "@|anhui.jpg|", "@|fujian.jpg|", "@|jiangxi.jpg|", "@|shandong.jpg|", "@|henan.jpg|", "@|hubei.jpg|", "@|hunan.jpg|", "@|guangdong.jpg|", "@|hainan.jpg|", "@|sichuan.jpg|", "@|guizhou.jpg|", "@|yunnan.jpg|", "@|shanxi.jpg|", "@|gansu.jpg|", "@|qinghai.jpg|", "@|neimenggu.jpg|", "@|guangxi.jpg|", "@|xizang.jpg|", "@|ningxia.jpg|", "@|xinjiang.jpg|"]
     
     setTimeout(() => {
       activeCity = cityList[randomNum(0, cityList.length - 1)]
-      document.querySelector('.page4 .so-4').src = `./static/images/${activeCity}.jpg`
+      document.querySelector('.page4 .so-4').src = `./static/resource/${activeCity}.jpg`
+      document.querySelector('.share img').src = `./static/resource/${activeCity}-2.jpg`
     }, 800);
     setTimeout(() => {
       owo.go('page4//moveToLeft/moveFromRight/true')
@@ -19,65 +20,12 @@ module.exports = {
 }
 </script>
 <style lang="less">
-
-.so-0 {
+img {
+  position: absolute;
   left: 0;
   right: 0;
-  top: 289px;
-  z-index: 4;
+  top: 0;
+  bottom: 0;
   margin: auto;
-  pointer-events: none;
-}
-.so-1 {
-  left: 81px;
-  top: 247px;
-  z-index: 3;
-  width: 593px;
-  height: 66px;
-  background-color: transparent;
-  border: none;
-  font-size: 32px;
-  padding: 0 15px;
-  outline: none;
-  background-image: url('@|1287.png|');
-}
-.so-2 {
-  left: 81px;
-  top: 399px;
-  z-index: 8;
-  background-image: url('@|132.png|');
-  width: 563px;
-  height: 759px;
-  outline: none;
-  background-color: transparent;
-  font-size: 34px;
-  padding: 20px 15px;
-  user-select: none;
-  li {
-    float: left;
-    border: 2px solid #bb2e2a;
-    width: 120px;
-    margin: 13px 8px;
-    text-align: center;
-    color: #bb2e2a;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 54px;
-    border-radius: 5px;
-  }
-  li.active {
-    background-color: #ffc7b3;
-    color: #900200;
-  }
-}
-.so-3 {
-  left: 259px;
-  top: 1221px;
-  z-index: 1;
-}
-.so-4 {
-  left: 0px;
-  top: 0px;
-  z-index: 0;
 }
 </style>
